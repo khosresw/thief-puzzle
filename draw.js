@@ -25,6 +25,6 @@ export function drawScene(ctx, assets, state) {
   ctx.drawImage(assets.plant, px * 64, py * 64, 32, 32);
 
   document.getElementById("caption").textContent = retrievalComplete
-    ? "🌱 Retrieval complete. The plant bows in silence."
+    ? "🌱 Retrieval complete."
     : "";
 }
