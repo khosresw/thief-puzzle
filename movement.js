@@ -5,10 +5,14 @@ export function handleKeyPress(e, state, ctx, assets) {
   if (state.movementLocked || state.retrievalComplete) return;
 
   let dx = 0, dy = 0;
-  if (e.key === "ArrowUp") dy = -1;
-  if (e.key === "ArrowDown") dy = 1;
-  if (e.key === "ArrowLeft") dx = -1;
-  if (e.key === "ArrowRight") dx = 1;
+  const key = e.key.toLowerCase();
+
+  if (key === "arrowup" || key === "w") dy = -1;
+  if (key === "arrowdown" || key === "s") dy = 1;
+  if (key === "arrowleft" || key === "a") dx = -1;
+  if (key === "arrowright" || key === "d") dx = 1;
+
+  if (dx === 0 && dy === 0) return;
 
   const last = state.handPath[state.handPath.length - 1];
   const nx = last.x + dx;
