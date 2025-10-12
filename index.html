@@ -12,6 +12,13 @@
   <h1>🌿 Find Biggest Path to Reach Plant Using Arrow Keys or W A S D on mobile</h1>
   <canvas id="ritualCanvas" width="1408" height="448"></canvas>
   <p id="caption"></p>
- <script type="module" src="script.js"></script>
+
+  <!-- Hidden input to trigger mobile keyboard -->
+  <input id="mobileKeyInput" type="text" style="opacity:0; position:absolute; z-index:-1;" />
+
+  <!-- Optional button to activate keyboard -->
+  <button onclick="document.getElementById('mobileKeyInput').focus()">🎮 Activate Ritual Controls</button>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
