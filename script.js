@@ -5,7 +5,7 @@ import { handleKeyPress } from "./movement.js";
 const canvas = document.getElementById("ritualCanvas");
 const ctx = canvas.getContext("2d");
 
-loadAssets(["balcony", "guard", "thief", "plant"], assets => {
+loadAssets(["diwalibal", "guard", "thief", "skylantern"], assets => {
   drawScene(ctx, assets, initialState);
   document.addEventListener("keydown", e => handleKeyPress(e, initialState, ctx, assets));
 });
